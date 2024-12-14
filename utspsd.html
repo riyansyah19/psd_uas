@@ -373,17 +373,26 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>#Prediksi Harga Cabai Merah Keriting Pada Provinsi Jawa Timur</p>
+  <p>Prediksi Harga Cabai Merah Keriting Pada Provinsi Jawa Timur</p>
 <section class="tex2jax_ignore mathjax_ignore" id="business-understanding">
 <h1>Business Understanding<a class="headerlink" href="#business-understanding" title="Link to this heading">#</a></h1>
+<h3>Memahami Bisnis</h3>
+<p>Cabai merah keriting merupakan salah satu komoditas pertanian strategis di Provinsi Jawa Timur yang memiliki peranan penting dalam mendukung perekonomian daerah. Harga cabai merah keriting cenderung fluktuatif, dipengaruhi oleh faktor-faktor seperti musim panen, kondisi cuaca, distribusi logistik, permintaan pasar, dan kebijakan pemerintah. Fluktuasi ini tidak hanya berdampak pada petani, tetapi juga pada pedagang, konsumen, serta pengambil kebijakan di sektor pertanian dan ekonomi.</p>
+<p>Harga cabai yang sulit diprediksi menciptakan tantangan besar bagi berbagai pihak. Petani sering kesulitan menentukan waktu yang tepat untuk panen atau menyimpan hasil produksi agar mendapatkan harga terbaik. Pedagang harus menghadapi risiko kerugian akibat fluktuasi harga yang tidak terduga, sementara konsumen terpengaruh oleh harga yang tinggi saat terjadi kelangkaan. Pemerintah, di sisi lain, memerlukan data prediksi yang akurat untuk merumuskan kebijakan yang dapat menjaga stabilitas harga sekaligus melindungi semua pihak yang terlibat.</p>
+<p>Dengan adanya prediksi harga cabai merah keriting yang akurat untuk Provinsi Jawa Timur, para pemangku kepentingan dapat mengambil langkah strategis yang lebih baik. Petani dapat merencanakan panen dan distribusi dengan lebih efektif, pedagang dapat mengatur stok dengan lebih bijak, konsumen dapat merencanakan pengeluaran rumah tangga secara efisien, dan pemerintah dapat menggunakan informasi ini untuk menjaga kestabilan harga di pasar serta memastikan keseimbangan antara pasokan dan permintaan.</p>  
+<h3>Tujuan Bisnis</h3>
 <p>Proyek ini bertujuan untuk menyediakan prediksi harga cabai merah keriting untuk hari berikutnya secara akurat, sehingga memberikan manfaat signifikan bagi konsumen, petani, dan pedagang.</p>
 <p>Konsumen dapat memanfaatkan prediksi ini untuk merencanakan belanja secara lebih efektif, khususnya dalam mengatur anggaran kebutuhan rumah tangga. Dengan mengetahui potensi kenaikan harga, konsumen dapat membeli cabai lebih awal sehingga menghindari pengeluaran yang lebih tinggi dan mengelola keuangan dengan lebih baik.</p>
 <p>Petani bisa menggunakan prediksi harga untuk menentukan waktu panen dan distribusi yang optimal agar hasil panen dapat dijual dengan harga terbaik. Informasi ini juga membantu petani meminimalkan kerugian akibat menjual pada saat harga rendah dan meningkatkan efisiensi dalam penyimpanan serta distribusi hasil panen.</p>
 <p>Pedagang mendapatkan keuntungan dalam pengelolaan stok dan strategi penetapan harga. Dengan prediksi harga, pedagang dapat menyesuaikan jumlah stok untuk menghindari surplus atau kekurangan cabai, menentukan harga jual yang kompetitif, serta merencanakan promosi yang tepat waktu, seperti memberikan diskon sebelum harga diprediksi naik.</p>
-<p>#Data Understanding</p>
+<h3>Permasalahan Analisa Binsis</h3>
+<p>1.Pemilihan Algoritma Machine Learning Terbaik Menentukan algoritma machine learning yang paling efektif untuk memprediksi harga cabai merah keriting memerlukan eksperimen yang cermat. Algoritma yang dipilih harus mampu menangkap pola kompleks yang dipengaruhi oleh variabel seperti cuaca, volume produksi, distribusi, dan permintaan pasar.</p>
+<p>2.Validasi dan Evaluasi Model Penting untuk melakukan evaluasi terhadap model prediksi menggunakan metrik yang sesuai, seperti MAE atau RMSE, untuk memastikan bahwa hasil prediksi dapat diandalkan dalam pengambilan keputusan. Pengujian pada data historis dan pembandingan hasil prediksi dengan harga aktual sangat penting dilakukan.</p>
+<p>3.Implementasi dan Manfaat Prediksi Prediksi harga harus mudah diakses dan digunakan oleh para pemangku kepentingan, seperti petani, pedagang, dan pemerintah. Jika informasi prediksi tidak dapat diimplementasikan dengan baik dalam proses pengambilan keputusan, maka manfaatnya menjadi terbatas.</p>  
+<h2>Data Understanding</h2>
 <p>data yang saya ambil merupakan data time series univariates yaitu data hagar cabai merah keriting perhari yang diambil dari tanggal 1 januari 2024 sampai 10 oktober 2024 pada provinsi jawa timur dengan jumlah data 464 dan memiliki 2 fitur:tanggal,harga cabai mk
 tipe data tanggal adalah time temporal dan harga cabai mk adalah numeric</p>
-<p>##menampilkan data</p>
+<h3>menampilkan data</h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -752,8 +761,8 @@ memory usage: 7.4+ KB
   </div>
 </div></div>
 </div>
-<p>#Data Preprocessing</p>
-<p>##Normalisasi Data</p>
+<h2>Data Preprocessing</h2>
+<h3>Normalisasi Data</h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -803,7 +812,7 @@ dtype: object
 </div>
 </div>
 <p>Disini kami menormalisasi data dulu agar nanti presentase errornya kecil dan kami menggunakan metode minmaxscaler untuk normalisasinya dimana data ini memiliki nilai minimum adalah 18500 dan nilai maksimumnya adalah 81100</p>
-<p>##Mencari Outlier</p>
+<h3>Mencari Outlier</h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -847,7 +856,7 @@ Index: []
 </div>
 </div>
 <p>jadi output diatas memberitahukan bahwa data ini tidak memiliki outlier</p>
-<p>##Sliding window</p>
+<h3>Sliding window</h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating lag features for multivariate time series data (PM10 and PM2.5)</span>
@@ -870,7 +879,7 @@ Index: []
 </div>
 </div>
 <p>karena ini adalah data time series univariate maka kita akan melakukan sliding windows dulu, nah disini kami membagi fiturnya menjadi 4 sehingga data ini memiliki fitur 4 dan targetnya 1</p>
-<p>##Pembagian Data Test dan Data Train</p>
+<h3>Pembagian Data Test dan Data Train</h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -920,7 +929,7 @@ Testing set size: 92
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="data-modelling">
 <h1>Data Modelling<a class="headerlink" href="#data-modelling" title="Link to this heading">#</a></h1>
-<p>##ensamble bagging</p>
+<h3>ensamble bagging</h3>
 <p>Ensemble Bagging adalah teknik pembelajaran mesin yang digunakan untuk meningkatkan kinerja model dengan menggabungkan prediksi dari beberapa model dasar (base estimators). Istilah “bagging” berasal dari “Bootstrap Aggregating”, yang merupakan metode pengambilan sampel untuk menghasilkan variasi dalam model.</p>
 <p>Pengertian Bagging
 Bootstrap Sampling: Dalam teknik ini, sejumlah subset acak dari data pelatihan diambil dengan pengembalian (replacement). Ini berarti beberapa contoh dalam data pelatihan dapat muncul lebih dari sekali dalam subset, sementara beberapa contoh lainnya mungkin tidak muncul sama sekali.</p>
@@ -1075,7 +1084,7 @@ Harga Aktual vs Prediksi pada Data Uji:
 </div>
 </div>
 </div>
-<p>##model LTSM</p>
+<h3>model LTSM</h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1369,7 +1378,7 @@ Harga Aktual vs Prediksi:
 </div>
 </div>
 </div>
-<p>##Model SVR</p>
+<h3>Model SVR</h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1448,7 +1457,7 @@ Harga Aktual vs Prediksi:
 </div>
 </div>
 </section>
-<p>#Deploy</p>
+<h2>Deploy</h2>
 <a href="https://riyansyah-psd-uas.hf.space/predict_cabai">link website</a>
     <script type="text/x-thebe-config">
     {
